@@ -83,7 +83,7 @@
       "resource": {
         "resourceType": "Procedure",
         "id": "reha-massnahme",
-        "status": "completed",
+        "status": "preparation",
         "code": {
           "coding": [{
             "system": "http://snomed.info/sct",
