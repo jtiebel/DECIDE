@@ -41,7 +41,7 @@
               "order": 1,
               "strength": "WEAK",
               "heading": "Endeffektor-basiertes Gangtraining zur Verbesserung der Gehfähigkeit",
-              "text": "Zur Verbesserung der Gehfähigkeit sollte bei initial nicht gehfähigen Patienten im subakuten Stadium nach Schlaganfall ein möglichst intensives Gangtraining mit oder ohne Einsatz eines endeffektor-basierten Gerätes (z. B. Gangtrainer) Teil des Therapieprogramms sein (Empfehlungsstärke B).",
+              "text": "Zur Verbesserung der Gehfähigkeit sollte bei initial nicht gehfähigen Patienten im subakuten Stadium nach Schlaganfall ein möglichst intensives Gangtraining mit oder ohne Einsatz eines endeffektor-basierten Gerätes (z. B. Gangtrainer) Teil des Therapieprogramms sein.",
               "tags": "",
               "interventions": {
                 "codes": [
@@ -209,7 +209,7 @@
               "order": 8,
               "strength": "WEAK",
               "heading": "Laufbandtraining zur Verbesserung der Gehstrecke",
-              "text": "Das Trainingsprogramm zur Steigerung der Gehstrecke sollte insbesondere bei bereits (mit Hilfe) gehfähigen Patienten möglichst intensiv sein, z. B. in Form eines zusätzlichen intensiven Gehtrainings (Empfehlungsstärke B) oder eines aeroben Laufbandtrainings (Empfehlungsstärke B), sofern dies der weitere Gesundheitszustand des Patienten (v. a. kardiopulmonal und orthopädisch) zulässt.",
+              "text": "Das Trainingsprogramm zur Steigerung der Gehstrecke sollte insbesondere bei bereits (mit Hilfe) gehfähigen Patienten möglichst intensiv sein, z. B. in Form eines zusätzlichen intensiven Gehtrainings oder eines aeroben Laufbandtrainings, sofern dies der weitere Gesundheitszustand des Patienten (v. a. kardiopulmonal und orthopädisch) zulässt.",
               "tags": "",
               "interventions": {
                 "codes": [
@@ -233,7 +233,7 @@
               "order": 9,
               "strength": "WEAK",
               "heading": "Konventionelles Gehtraining zur Verbesserung der Gehstrecke",
-              "text": "Im subakuten Stadium nach Schlaganfall sollte ein Übungsprogramm mit individueller Steigerung des Schwierigkeitsgrades durchgeführt werden (Empfehlungsgrad B).",
+              "text": "Im subakuten Stadium nach Schlaganfall sollte ein Übungsprogramm mit individueller Steigerung des Schwierigkeitsgrades durchgeführt werden.",
               "tags": "",
               "interventions": {
                 "codes": [
@@ -305,7 +305,7 @@
               "order": 12,
               "strength": "WEAK",
               "heading": "Motor Relearning zur Verbesserung der Balance",
-              "text": "Motor-Relearning sollte zur Verbesserung der Balance bei subakuten Patienten eingesetzt werden (Empfehlungsgrad B).",
+              "text": "Motor-Relearning sollte zur Verbesserung der Balance bei subakuten Patienten eingesetzt werden.",
               "tags": "",
               "interventions": {
                 "codes": [

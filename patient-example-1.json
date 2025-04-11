@@ -66,22 +66,6 @@
     {
       "resource": {
         "resourceType": "Procedure",
-        "id": "thrombolyse",
-        "status": "completed",
-        "code": {
-          "coding": [{
-            "system": "http://snomed.info/sct",
-            "code": "428441000124100",
-            "display": "Thrombolyse bei Schlaganfall"
-          }]
-        },
-        "subject": { "reference": "Patient/patient-1" },
-        "performedDateTime": "2025-04-10"
-      }
-    },
-    {
-      "resource": {
-        "resourceType": "Procedure",
         "id": "reha-massnahme",
         "status": "preparation",
         "code": {
@@ -91,8 +75,7 @@
             "display": "Rehabilitationsmaßnahme – Physiotherapie"
           }]
         },
-        "subject": { "reference": "Patient/patient-1" },
-        "performedDateTime": "2025-04-12"
+        "subject": { "reference": "Patient/patient-1" }
       }
     },
     {
