@@ -17,10 +17,17 @@
         "id": "condition-1",
         "subject": { "reference": "Patient/patient-1" },
         "code": {
-          "coding": [{ "system": "http://hl7.org/fhir/sid/icd-10", "code": "I63.9", "display": "Schlaganfall" }]
+          "coding": [{
+            "system": "http://hl7.org/fhir/sid/icd-10",
+            "code": "I63.9",
+            "display": "Schlaganfall"
+          }]
         },
         "clinicalStatus": {
-          "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }]
+          "coding": [{
+            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+            "code": "active"
+          }]
         }
       }
     },
@@ -30,9 +37,13 @@
         "id": "barthel-index",
         "status": "final",
         "code": {
-          "coding": [{ "system": "https://loinc.org", "code": "8355-8", "display": "Barthel Index" }]
+          "coding": [{
+            "system": "https://loinc.org",
+            "code": "8355-8",
+            "display": "Barthel Index"
+          }]
         },
-        "valueInteger": null,
+        "valueInteger": 35,
         "subject": { "reference": "Patient/patient-1" }
       }
     },
@@ -42,9 +53,13 @@
         "id": "nihss",
         "status": "final",
         "code": {
-          "coding": [{ "system": "https://loinc.org", "code": "72114-3", "display": "NIH Stroke Scale Total Score" }]
+          "coding": [{
+            "system": "https://loinc.org",
+            "code": "72114-3",
+            "display": "NIH Stroke Scale Total Score"
+          }]
         },
-        "valueInteger": null,
+        "valueInteger": 18,
         "subject": { "reference": "Patient/patient-1" }
       }
     },
@@ -54,7 +69,11 @@
         "id": "thrombolyse",
         "status": "completed",
         "code": {
-          "coding": [{ "system": "http://snomed.info/sct", "code": "428441000124100", "display": "Thrombolyse bei Schlaganfall" }]
+          "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "428441000124100",
+            "display": "Thrombolyse bei Schlaganfall"
+          }]
         },
         "subject": { "reference": "Patient/patient-1" },
         "performedDateTime": "2025-04-10"
@@ -64,22 +83,16 @@
       "resource": {
         "resourceType": "Procedure",
         "id": "reha-massnahme",
-        "status": "not-done",
+        "status": "completed",
         "code": {
-          "coding": [{ "system": "http://snomed.info/sct", "code": "410942007", "display": "Rehabilitationsmaßnahme" }]
+          "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "410942007",
+            "display": "Rehabilitationsmaßnahme – Physiotherapie"
+          }]
         },
-        "subject": { "reference": "Patient/patient-1" }
-      }
-    },
-    {
-      "resource": {
-        "resourceType": "Procedure",
-        "id": "operation",
-        "status": "not-done",
-        "code": {
-          "coding": [{ "system": "http://snomed.info/sct", "code": "387713003", "display": "Operation" }]
-        },
-        "subject": { "reference": "Patient/patient-1" }
+        "subject": { "reference": "Patient/patient-1" },
+        "performedDateTime": "2025-04-12"
       }
     },
     {
@@ -98,7 +111,9 @@
         "resourceType": "Goal",
         "id": "rehaziel-1",
         "lifecycleStatus": "proposed",
-        "description": { "text": "Rehabilitationsziel (wird noch ausgewählt)" },
+        "description": {
+          "text": "Rehabilitationsziel (wird noch ausgewählt)"
+        },
         "subject": { "reference": "Patient/patient-1" }
       }
     },
@@ -109,7 +124,7 @@
         "status": "draft",
         "intent": "order",
         "code": {
-          "text": "Anforderung: Therapie oder Hilfsmittel (wird noch definiert)"
+          "text": "Anforderung: Physiotherapie (Reha)"
         },
         "subject": { "reference": "Patient/patient-1" }
       }
