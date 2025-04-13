@@ -269,7 +269,7 @@
           ]
         },
         "description": {
-          "text": "Zieldefinition im Rahmen der geplanten physiotherapeutischen Maßnahmen – aktuell in Bearbeitung durch Physiotherapie-Team"
+          "text": "aktuell in Bearbeitung durch Physiotherapie"
         },
         "subject": {
           "reference": "urn:uuid:patient-example"
@@ -281,7 +281,7 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehabilitationsziel: wird noch abgestimmt</div>"
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Ziel: aktuell in Bearbeitung durch Psychsiotehrapie</div>"
         }
       }
     }
