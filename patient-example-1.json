@@ -6,7 +6,7 @@
       "fullUrl": "urn:uuid:patient-erika",
       "resource": {
         "resourceType": "Patient",
-        "id": "patient-erika",
+        "id": "patient-erika", 
         "name": [
           {
             "family": "Musterfrau",
