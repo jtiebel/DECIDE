@@ -143,7 +143,7 @@
             {
               "system": "http://loinc.org",
               "code": "72114-3",
-              "display": "NIH Stroke Scale Total Score"
+              "display": "NIH Stroke Scale"
             }
           ]
         },
