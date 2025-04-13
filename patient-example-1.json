@@ -3,42 +3,31 @@
   "type": "collection",
   "entry": [
     {
-      "fullUrl": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21",
+      "fullUrl": "urn:uuid:patient-erika",
       "resource": {
         "resourceType": "Patient",
-        "id": "3d6fa9d2-1a4f-4c22-95d7-2398f394cb21",
+        "id": "patient-erika",
+        "name": [{ "family": "Musterfrau", "given": ["Erika"] }],
+        "birthDate": "1958-06-12",
+        "gender": "female",
         "text": {
           "status": "generated",
           "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Patientin Erika Musterfrau</div>"
-        },
-        "name": [
-          {
-            "family": "Musterfrau",
-            "given": ["Erika"]
-          }
-        ],
-        "birthDate": "1958-06-12",
-        "gender": "female"
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:5a03e231-b92d-468a-8ff2-2c8b6bc9cb6c",
+      "fullUrl": "urn:uuid:condition-abnormal-gait",
       "resource": {
         "resourceType": "Condition",
-        "id": "5a03e231-b92d-468a-8ff2-2c8b6bc9cb6c",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Diagnose: Cerebral infarction, unspecified (I63.9)</div>"
-        },
-        "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
-        },
+        "id": "condition-abnormal-gait",
+        "subject": { "reference": "urn:uuid:patient-erika" },
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/sid/icd-10",
-              "code": "I63.9",
-              "display": "Cerebral infarction, unspecified"
+              "system": "http://snomed.info/sct",
+              "code": "22325002",
+              "display": "Abnormal gait (finding)"
             }
           ]
         },
@@ -57,130 +46,97 @@
               "code": "confirmed"
             }
           ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Befund: Abnormal gait</div>"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:ba8a4bc2-75df-498f-bfaa-c7d43e18798d",
+      "fullUrl": "urn:uuid:servicerequest-physiotherapy-training",
       "resource": {
-        "resourceType": "Observation",
-        "id": "ba8a4bc2-75df-498f-bfaa-c7d43e18798d",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Barthel Index: 35</div>"
-        },
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "8355-8",
-              "display": "Barthel Index"
-            }
-          ]
-        },
-        "valueInteger": 35,
-        "effectiveDateTime": "2024-12-01T10:00:00+01:00",
-        "performer": [
-          {
-            "reference": "Practitioner/example"
-          }
-        ],
-        "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:2e7df426-986b-4345-bf09-0d3f4ed198fa",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "2e7df426-986b-4345-bf09-0d3f4ed198fa",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>NIHSS: 18</div>"
-        },
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "72114-3",
-              "display": "NIH Stroke Scale Total Score"
-            }
-          ]
-        },
-        "valueInteger": 18,
-        "effectiveDateTime": "2024-12-01T10:00:00+01:00",
-        "performer": [
-          {
-            "reference": "Practitioner/example"
-          }
-        ],
-        "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:b9dcb22a-d948-437e-9bc2-63e5aa7fe99b",
-      "resource": {
-        "resourceType": "Procedure",
-        "id": "b9dcb22a-d948-437e-9bc2-63e5aa7fe99b",
-        "status": "preparation",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Geplante Reha-Maßnahme: Physiotherapie</div>"
-        },
+        "resourceType": "ServiceRequest",
+        "id": "servicerequest-physiotherapy-training",
+        "status": "active",
+        "intent": "order",
+        "subject": { "reference": "urn:uuid:patient-erika" },
         "code": {
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "735963003",
-              "display": "Physiotherapy"
+              "code": "58452000",
+              "display": "Physiotherapy training"
             }
           ]
         },
-        "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        "reasonReference": [
+          { "reference": "urn:uuid:condition-abnormal-gait" }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Verordnung: Physiotherapie Training aufgrund Gangstörung</div>"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:cf5dc217-c6aa-4d5f-8b7b-39adf8f79c91",
+      "fullUrl": "urn:uuid:servicerequest-ambulation-training",
       "resource": {
-        "resourceType": "CarePlan",
-        "id": "cf5dc217-c6aa-4d5f-8b7b-39adf8f79c91",
-        "status": "draft",
-        "intent": "plan",
-        "title": "Rehaplan",
+        "resourceType": "ServiceRequest",
+        "id": "servicerequest-ambulation-training",
+        "status": "active",
+        "intent": "order",
+        "subject": { "reference": "urn:uuid:patient-erika" },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "359665005",
+              "display": "Ambulation training"
+            }
+          ]
+        },
+        "basedOn": [
+          { "reference": "urn:uuid:servicerequest-physiotherapy-training" }
+        ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehaplan in Planung</div>"
-        },
-        "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
-        },
-        "activity": [
-          {
-            "detail": {
-              "status": "not-started",
-              "description": "Aktivitäten noch in Planung"
-            }
-          }
-        ]
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Teilmaßnahme: Mobilitätstraining basierend auf Verordnung Physiotherapie</div>"
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:9b6f82eb-36ef-42ad-a7f2-d535cbb47973",
+      "fullUrl": "urn:uuid:servicerequest-gait-training",
       "resource": {
-        "resourceType": "Goal",
-        "id": "9b6f82eb-36ef-42ad-a7f2-d535cbb47973",
-        "lifecycleStatus": "proposed",
+        "resourceType": "ServiceRequest",
+        "id": "servicerequest-gait-training",
+        "status": "active",
+        "intent": "order",
+        "subject": { "reference": "urn:uuid:patient-erika" },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "74914000",
+              "display": "Gait re-education"
+            }
+          ]
+        },
+        "basedOn": [
+          { "reference": "urn:uuid:servicerequest-ambulation-training" }
+        ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehabilitationsziel: wird noch abgestimmt</div>"
-        },
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Teilmaßnahme: Gangtraining, abgeleitet aus Mobilitätstraining</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:goal-reha-planung",
+      "resource": {
+        "resourceType": "Goal",
+        "id": "goal-reha-planung",
+        "lifecycleStatus": "proposed",
         "achievementStatus": {
           "coding": [
             {
@@ -191,35 +147,19 @@
           ]
         },
         "description": {
-          "text": "Rehabilitationsziel (wird noch ausgewählt)"
+          "text": "Zieldefinition im Rahmen der geplanten physiotherapeutischen Maßnahmen – aktuell in Bearbeitung durch Physiotherapie-Team"
         },
         "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:eb820b84-d1b4-4531-bf01-32581c95e108",
-      "resource": {
-        "resourceType": "ServiceRequest",
-        "id": "eb820b84-d1b4-4531-bf01-32581c95e108",
-        "status": "draft",
-        "intent": "order",
+          "reference": "urn:uuid:patient-erika"
+        },
+        "addresses": [
+          {
+            "reference": "urn:uuid:condition-abnormal-gait"
+          }
+        ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Anforderung: Physiotherapie (Reha)</div>"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "735963003",
-              "display": "Physiotherapy"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehabilitationsziel: wird durch Physiotherapie bestimmt</div>"
         }
       }
     }
