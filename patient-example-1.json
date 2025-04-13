@@ -3,113 +3,224 @@
   "type": "collection",
   "entry": [
     {
+      "fullUrl": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21",
       "resource": {
         "resourceType": "Patient",
-        "id": "patient-1",
-        "name": [{ "family": "Musterfrau", "given": ["Erika"] }],
+        "id": "3d6fa9d2-1a4f-4c22-95d7-2398f394cb21",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Patientin Erika Musterfrau</div>"
+        },
+        "name": [
+          {
+            "family": "Musterfrau",
+            "given": ["Erika"]
+          }
+        ],
         "birthDate": "1958-06-12",
         "gender": "female"
       }
     },
     {
+      "fullUrl": "urn:uuid:5a03e231-b92d-468a-8ff2-2c8b6bc9cb6c",
       "resource": {
         "resourceType": "Condition",
-        "id": "condition-1",
-        "subject": { "reference": "Patient/patient-1" },
+        "id": "5a03e231-b92d-468a-8ff2-2c8b6bc9cb6c",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Diagnose: Cerebral infarction, unspecified (I63.9)</div>"
+        },
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        },
         "code": {
-          "coding": [{
-            "system": "http://hl7.org/fhir/sid/icd-10",
-            "code": "I63.9",
-            "display": "Schlaganfall"
-          }]
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I63.9",
+              "display": "Cerebral infarction, unspecified"
+            }
+          ]
         },
         "clinicalStatus": {
-          "coding": [{
-            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-            "code": "active"
-          }]
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
         }
       }
     },
     {
+      "fullUrl": "urn:uuid:ba8a4bc2-75df-498f-bfaa-c7d43e18798d",
       "resource": {
         "resourceType": "Observation",
-        "id": "barthel-index",
+        "id": "ba8a4bc2-75df-498f-bfaa-c7d43e18798d",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Barthel Index: 35</div>"
+        },
         "status": "final",
         "code": {
-          "coding": [{
-            "system": "https://loinc.org",
-            "code": "8355-8",
-            "display": "Barthel Index"
-          }]
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8355-8",
+              "display": "Barthel Index"
+            }
+          ]
         },
         "valueInteger": 35,
-        "subject": { "reference": "Patient/patient-1" }
+        "effectiveDateTime": "2024-12-01T10:00:00+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/example"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        }
       }
     },
     {
+      "fullUrl": "urn:uuid:2e7df426-986b-4345-bf09-0d3f4ed198fa",
       "resource": {
         "resourceType": "Observation",
-        "id": "nihss",
+        "id": "2e7df426-986b-4345-bf09-0d3f4ed198fa",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>NIHSS: 18</div>"
+        },
         "status": "final",
         "code": {
-          "coding": [{
-            "system": "https://loinc.org",
-            "code": "72114-3",
-            "display": "NIH Stroke Scale Total Score"
-          }]
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72114-3",
+              "display": "NIH Stroke Scale Total Score"
+            }
+          ]
         },
         "valueInteger": 18,
-        "subject": { "reference": "Patient/patient-1" }
+        "effectiveDateTime": "2024-12-01T10:00:00+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/example"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        }
       }
     },
     {
+      "fullUrl": "urn:uuid:b9dcb22a-d948-437e-9bc2-63e5aa7fe99b",
       "resource": {
         "resourceType": "Procedure",
-        "id": "reha-massnahme",
+        "id": "b9dcb22a-d948-437e-9bc2-63e5aa7fe99b",
         "status": "preparation",
-        "code": {
-          "coding": [{
-            "system": "http://snomed.info/sct",
-            "code": "410942007",
-            "display": "Rehabilitationsmaßnahme – Physiotherapie"
-          }]
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Geplante Reha-Maßnahme: Physiotherapie</div>"
         },
-        "subject": { "reference": "Patient/patient-1" }
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "735963003",
+              "display": "Physiotherapy"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        }
       }
     },
     {
+      "fullUrl": "urn:uuid:cf5dc217-c6aa-4d5f-8b7b-39adf8f79c91",
       "resource": {
         "resourceType": "CarePlan",
-        "id": "careplan-1",
+        "id": "cf5dc217-c6aa-4d5f-8b7b-39adf8f79c91",
         "status": "draft",
         "intent": "plan",
         "title": "Rehaplan",
-        "subject": { "reference": "Patient/patient-1" },
-        "activity": []
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehaplan in Planung</div>"
+        },
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        },
+        "activity": [
+          {
+            "detail": {
+              "status": "not-started",
+              "description": "Aktivitäten noch in Planung"
+            }
+          }
+        ]
       }
     },
     {
+      "fullUrl": "urn:uuid:9b6f82eb-36ef-42ad-a7f2-d535cbb47973",
       "resource": {
         "resourceType": "Goal",
-        "id": "rehaziel-1",
+        "id": "9b6f82eb-36ef-42ad-a7f2-d535cbb47973",
         "lifecycleStatus": "proposed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehabilitationsziel: wird noch abgestimmt</div>"
+        },
+        "achievementStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/goal-achievement",
+              "code": "in-progress",
+              "display": "In Progress"
+            }
+          ]
+        },
         "description": {
           "text": "Rehabilitationsziel (wird noch ausgewählt)"
         },
-        "subject": { "reference": "Patient/patient-1" }
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        }
       }
     },
     {
+      "fullUrl": "urn:uuid:eb820b84-d1b4-4531-bf01-32581c95e108",
       "resource": {
         "resourceType": "ServiceRequest",
-        "id": "servicerequest-1",
+        "id": "eb820b84-d1b4-4531-bf01-32581c95e108",
         "status": "draft",
         "intent": "order",
-        "code": {
-          "text": "Anforderung: Physiotherapie (Reha)"
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Anforderung: Physiotherapie (Reha)</div>"
         },
-        "subject": { "reference": "Patient/patient-1" }
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "735963003",
+              "display": "Physiotherapy"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3d6fa9d2-1a4f-4c22-95d7-2398f394cb21"
+        }
       }
     }
   ]
