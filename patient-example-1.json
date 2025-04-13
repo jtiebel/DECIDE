@@ -3,10 +3,10 @@
   "type": "collection",
   "entry": [
     {
-      "fullUrl": "urn:uuid:patient-erika",
+      "fullUrl": "urn:uuid:patient-example",
       "resource": {
         "resourceType": "Patient",
-        "id": "patient-erika", 
+        "id": "patient-example", 
         "name": [
           {
             "family": "Musterfrau",
@@ -29,7 +29,7 @@
         "resourceType": "Condition",
         "id": "condition-stroke",
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "code": {
           "coding": [
@@ -68,7 +68,7 @@
         "resourceType": "Condition",
         "id": "condition-abnormal-gait",
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "code": {
           "coding": [
@@ -124,7 +124,7 @@
           }
         ],
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "text": {
           "status": "generated",
@@ -155,7 +155,7 @@
           }
         ],
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "text": {
           "status": "generated",
@@ -171,7 +171,7 @@
         "status": "active",
         "intent": "order",
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "code": {
           "coding": [
@@ -201,7 +201,7 @@
         "status": "active",
         "intent": "order",
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "code": {
           "coding": [
@@ -231,7 +231,7 @@
         "status": "active",
         "intent": "order",
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "code": {
           "coding": [
@@ -272,7 +272,7 @@
           "text": "Zieldefinition im Rahmen der geplanten physiotherapeutischen Maßnahmen – aktuell in Bearbeitung durch Physiotherapie-Team"
         },
         "subject": {
-          "reference": "urn:uuid:patient-erika"
+          "reference": "urn:uuid:patient-example"
         },
         "addresses": [
           {
