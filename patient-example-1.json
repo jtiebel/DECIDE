@@ -7,7 +7,12 @@
       "resource": {
         "resourceType": "Patient",
         "id": "patient-erika",
-        "name": [{ "family": "Musterfrau", "given": ["Erika"] }],
+        "name": [
+          {
+            "family": "Musterfrau",
+            "given": ["Erika"]
+          }
+        ],
         "birthDate": "1958-06-12",
         "gender": "female",
         "text": {
@@ -17,11 +22,75 @@
       }
     },
     {
+      "fullUrl": "urn:uuid:observation-barthel",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-barthel",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8355-8",
+              "display": "Barthel Index"
+            }
+          ]
+        },
+        "valueInteger": 35,
+        "effectiveDateTime": "2024-12-01T10:00:00+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/example"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:patient-erika"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Barthel Index: 35</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-nihss",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-nihss",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72114-3",
+              "display": "NIH Stroke Scale Total Score"
+            }
+          ]
+        },
+        "valueInteger": 18,
+        "effectiveDateTime": "2024-12-01T10:00:00+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/example"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:patient-erika"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>NIHSS: 18</div>"
+        }
+      }
+    },
+    {
       "fullUrl": "urn:uuid:condition-abnormal-gait",
       "resource": {
         "resourceType": "Condition",
         "id": "condition-abnormal-gait",
-        "subject": { "reference": "urn:uuid:patient-erika" },
+        "subject": {
+          "reference": "urn:uuid:patient-erika"
+        },
         "code": {
           "coding": [
             {
@@ -49,7 +118,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Befund: Abnormal gait</div>"
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Diagnose: Abnormal gait</div>"
         }
       }
     },
@@ -60,7 +129,9 @@
         "id": "servicerequest-physiotherapy-training",
         "status": "active",
         "intent": "order",
-        "subject": { "reference": "urn:uuid:patient-erika" },
+        "subject": {
+          "reference": "urn:uuid:patient-erika"
+        },
         "code": {
           "coding": [
             {
@@ -71,7 +142,9 @@
           ]
         },
         "reasonReference": [
-          { "reference": "urn:uuid:condition-abnormal-gait" }
+          {
+            "reference": "urn:uuid:condition-abnormal-gait"
+          }
         ],
         "text": {
           "status": "generated",
@@ -86,7 +159,9 @@
         "id": "servicerequest-ambulation-training",
         "status": "active",
         "intent": "order",
-        "subject": { "reference": "urn:uuid:patient-erika" },
+        "subject": {
+          "reference": "urn:uuid:patient-erika"
+        },
         "code": {
           "coding": [
             {
@@ -97,7 +172,9 @@
           ]
         },
         "basedOn": [
-          { "reference": "urn:uuid:servicerequest-physiotherapy-training" }
+          {
+            "reference": "urn:uuid:servicerequest-physiotherapy-training"
+          }
         ],
         "text": {
           "status": "generated",
@@ -112,7 +189,9 @@
         "id": "servicerequest-gait-training",
         "status": "active",
         "intent": "order",
-        "subject": { "reference": "urn:uuid:patient-erika" },
+        "subject": {
+          "reference": "urn:uuid:patient-erika"
+        },
         "code": {
           "coding": [
             {
@@ -123,7 +202,9 @@
           ]
         },
         "basedOn": [
-          { "reference": "urn:uuid:servicerequest-ambulation-training" }
+          {
+            "reference": "urn:uuid:servicerequest-ambulation-training"
+          }
         ],
         "text": {
           "status": "generated",
@@ -159,7 +240,7 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehabilitationsziel: wird durch Physiotherapie bestimmt</div>"
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Rehabilitationsziel: wird noch abgestimmt</div>"
         }
       }
     }
